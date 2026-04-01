@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://v6tuub1qgchf"]
+
+[ext_resource type="Script" uid="uid://dlupn162u1jgj" path="res://player.gd" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://drxgh6obw0nyc" path="res://item.tscn" id="2_r0du0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
+
+[node name="Node2D" type="Node2D" unique_id=611316477]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1132045356]
+position = Vector2(200, 200)
+script = ExtResource("1_glv2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=527137855]
+shape = SubResource("RectangleShape2D_rxg2q")
+debug_color = Color(0.8, 0.3529412, 0.6039216, 0.81960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=52282693]
+position = Vector2(200, 300)
+
+[node name="item" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
+position = Vector2(500, 300)
+item_name = "Coin"
