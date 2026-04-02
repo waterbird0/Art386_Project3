@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d05esoihxfaeq"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://dlupn162u1jgj" path="res://player.gd" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://drxgh6obw0nyc" path="res://item.tscn" id="2_r0du0"]
 [ext_resource type="Texture2D" uid="uid://igpkl3bwd2ml" path="res://icon.svg" id="4_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
@@ -19,6 +19,8 @@ debug_color = Color(0.8, 0.3529412, 0.6039216, 0.81960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=52282693]
 position = Vector2(200, 300)
+scale = Vector2(2, 2)
+texture = ExtResource("4_cm0pq")
 
 [node name="item" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
 position = Vector2(1110, 50)
