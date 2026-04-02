@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c0nex2jes41uy"]
+
+[ext_resource type="Texture2D" uid="uid://ddtnuop4l3hvt" path="res://Temp Assets/blue-square-image-3.png" id="2_f7asb"]
+
+[sub_resource type="Curve2D" id="Curve2D_7tiyv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -339, 7, 0, 0, 0, 0, 408, 11, 0, 0, 0, 0, 655, 251, 0, 0, 0, 0, 284, 447, 0, 0, 0, 0, -174, 430, 0, 0, 0, 0, -339, 7)
+}
+point_count = 6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8ta2"]
+size = Vector2(172, 171)
+
+[sub_resource type="Animation" id="Animation_7tiyv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r8ta2"]
+resource_name = "progress"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2423.356]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f7asb"]
+_data = {
+&"RESET": SubResource("Animation_7tiyv"),
+&"progress": SubResource("Animation_r8ta2")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1197130464]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1594749577]
+curve = SubResource("Curve2D_7tiyv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=66498758]
+position = Vector2(-339, 7)
+rotation = 0.0053547015
+
+[node name="customer" type="CharacterBody2D" parent="Path2D/PathFollow2D" unique_id=897534651]
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/customer" unique_id=1259587455]
+texture = ExtResource("2_f7asb")
+region_enabled = true
+region_rect = Rect2(1120, 1288, 184, 184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/customer" unique_id=1559145805]
+position = Vector2(-1, -3.5)
+shape = SubResource("RectangleShape2D_r8ta2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=734950868]
+libraries/ = SubResource("AnimationLibrary_f7asb")

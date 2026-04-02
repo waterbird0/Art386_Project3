@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://v6tuub1qgchf"]
 
-[ext_resource type="Script" uid="uid://dlupn162u1jgj" path="res://player.gd" id="1_glv2v"]
+[ext_resource type="Script" path="res://player.gd" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://drxgh6obw0nyc" path="res://item.tscn" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://igpkl3bwd2ml" path="res://icon.svg" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
 
@@ -19,5 +21,21 @@ debug_color = Color(0.8, 0.3529412, 0.6039216, 0.81960785)
 position = Vector2(200, 300)
 
 [node name="item" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
-position = Vector2(500, 300)
+position = Vector2(1110, 50)
 item_name = "Coin"
+
+[node name="Table" type="Sprite2D" parent="." unique_id=894916009]
+position = Vector2(633.5, 495)
+scale = Vector2(3.2265623, 1.2812498)
+texture = ExtResource("4_cm0pq")
+
+[node name="Customer Temp" parent="." unique_id=1197130464 instance=ExtResource("5_fos0i")]
+position = Vector2(573, 247)
+
+[node name="Path2D" parent="Customer Temp" index="0" unique_id=1594749577]
+position = Vector2(-343, 341)
+
+[node name="AnimationPlayer" parent="Customer Temp" index="1" unique_id=734950868]
+autoplay = &"progress"
+
+[editable path="Customer Temp"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dh6wrwnnf8ywe"]
+
+[ext_resource type="Texture2D" uid="uid://c18p6oivp15e5" path="res://Temp Assets/CozyDesert/CozyDesert.png" id="1_vmwkq"]
+
+[node name="Node2D" type="Node2D" unique_id=1608760585]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=510731616]
+z_index = -4000
+offset_right = 1285.0
+offset_bottom = 717.0
+
+[node name="CozyDesert" type="Sprite2D" parent="." unique_id=268962338]
+z_index = -3684
+scale = Vector2(0.6704841, 0.66604996)
+texture = ExtResource("1_vmwkq")
+centered = false
