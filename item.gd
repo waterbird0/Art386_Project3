@@ -1,6 +1,10 @@
 extends Area2D
 
 @export var item_name := "Coin"
+@export var item_type := "decoration"
+@export var description := "A cute decorative item."
+@export var value := 10
+@export var amount := 1
 
 var player_in_range := false
 
@@ -8,7 +12,7 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
-func _process(delta):
+func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		pick_up()
 
@@ -21,5 +25,7 @@ func _on_body_exited(body):
 		player_in_range = false
 
 func pick_up():
-	print("Recogido: ", item_name)
-	queue_free()
+	var inventory = get_tree().get_first_node_in_group("inventory")
+	if inventory:
+		inventory.add_item(item_name, item_type, description, value, amount)
+		queue_free()
