@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://boawy7e12mnm6"]
+
+[ext_resource type="Script" uid="uid://bywt6r3ygnbaw" path="res://scripts/main_ui.gd" id="1_fnul3"]
+
+[node name="MainUI" type="Control" unique_id=1698500038]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 846.0
+offset_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fnul3")
+
+[node name="Background" type="TextureRect" parent="." unique_id=887161938]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 47.0
+
+[node name="CaveButton1" type="Button" parent="." unique_id=319512954]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 112.0
+offset_right = 58.0
+offset_bottom = 143.0
+text = "Cave 1"
+
+[node name="CaveButton2" type="Button" parent="." unique_id=552659291]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 122.0
+offset_right = 450.0
+offset_bottom = 153.0
+text = "Cave 2"
+
+[node name="MoneyLabel" type="Label" parent="." unique_id=897449068]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 4.0
+offset_right = 454.0
+offset_bottom = 27.0
+text = "Money: 0"
+
+[node name="ItemLabel" type="Label" parent="." unique_id=663209311]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 25.0
+offset_right = 468.0
+offset_bottom = 48.0
+text = "Item: None"
+
+[node name="MessageLabel" type="Label" parent="." unique_id=1386512830]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 237.0
+offset_right = 356.0
+offset_bottom = 260.0
+text = "Click a cave to gather an item."
+
+[node name="InventoryLabel" type="Label" parent="." unique_id=1783420643]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 138.0
+offset_bottom = 48.0
+text = "Inventory: Empty"
+
+[connection signal="pressed" from="CaveButton1" to="." method="_on_cave_button_1_pressed"]
+[connection signal="pressed" from="CaveButton2" to="." method="_on_cave_button_2_pressed"]

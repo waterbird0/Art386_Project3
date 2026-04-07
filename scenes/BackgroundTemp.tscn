@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dh6wrwnnf8ywe"]
 
-[ext_resource type="Texture2D" uid="uid://c18p6oivp15e5" path="res://Temp Assets/CozyDesert/CozyDesert.png" id="1_vmwkq"]
+[ext_resource type="Texture2D" uid="uid://c18p6oivp15e5" path="res://assets/CozyDesert/CozyDesert.png" id="1_vmwkq"]
 
 [node name="Node2D" type="Node2D" unique_id=1608760585]
 
