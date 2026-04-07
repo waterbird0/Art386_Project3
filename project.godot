@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Art386Project3"
-run/main_scene="uid://d05esoihxfaeq"
+run/main_scene="uid://dxa6u2fw14sbn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://dvu6x2fal8fbq"
 
 [display]
 
