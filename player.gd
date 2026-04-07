@@ -5,7 +5,7 @@ var speed = 200
 func _ready():
 	add_to_group("player")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_right"):

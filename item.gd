@@ -1,8 +1,7 @@
 extends Area2D
 
-@export var item_name := "Coin"
+@export var item_name := "Rock"
 @export var item_type := "decoration"
-@export var description := "A cute decorative item."
 @export var value := 10
 @export var amount := 1
 
@@ -27,5 +26,5 @@ func _on_body_exited(body):
 func pick_up():
 	var inventory = get_tree().get_first_node_in_group("inventory")
 	if inventory:
-		inventory.add_item(item_name, item_type, description, value, amount)
+		inventory.add_item(item_name, item_type, value, amount)
 		queue_free()

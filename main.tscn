@@ -24,7 +24,11 @@ position = Vector2(200, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("4_cm0pq")
 
-[node name="item" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
+[node name="item (coin)" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
+position = Vector2(1110, 50)
+item_name = "Coin"
+
+[node name="item (rock)" parent="." unique_id=642725408 instance=ExtResource("2_r0du0")]
 position = Vector2(1110, 50)
 
 [node name="Table" type="Sprite2D" parent="." unique_id=894916009]
