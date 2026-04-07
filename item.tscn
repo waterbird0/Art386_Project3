@@ -7,7 +7,6 @@
 
 [node name="item" type="Area2D" unique_id=1517269143]
 script = ExtResource("1_tnite")
-item_name = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1239127756]
 scale = Vector2(0.4, 0.4)

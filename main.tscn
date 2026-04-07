@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
 [ext_resource type="PackedScene" uid="uid://rwgd7dm2nwix" path="res://Money.tscn" id="6_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://bvcjs4ohorlet" path="res://spawn_customer.tscn" id="7_lgr22"]
+[ext_resource type="Script" uid="uid://d34klbt6ve2j6" path="res://inventory.gd" id="5_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
+[ext_resource type="Script" uid="uid://qjsgpawvyh2t" path="res://inventory_ui.gd" id="6_3dxm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
 
@@ -56,6 +59,25 @@ offset_bottom = 99.0
 
 [node name="SpawnCustomer" parent="." unique_id=997328206 instance=ExtResource("7_lgr22")]
 position = Vector2(-216, 329)
+
+[node name="Inventory" type="Node" parent="." unique_id=613173553]
+script = ExtResource("5_3dxm6")
+
+[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=1759236443]
+script = ExtResource("6_3dxm6")
+
+[node name="Panel" type="Panel" parent="InventoryUI" unique_id=499249829]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 350.0
+
+[node name="Label" type="Label" parent="InventoryUI/Panel" unique_id=688324141]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0
 
 [editable path="Customer Temp"]
 [editable path="Node2D"]
