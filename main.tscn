@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://dlupn162u1jgj" path="res://player.gd" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://drxgh6obw0nyc" path="res://item.tscn" id="2_r0du0"]
 [ext_resource type="Texture2D" uid="uid://igpkl3bwd2ml" path="res://icon.svg" id="4_cm0pq"]
+[ext_resource type="Script" uid="uid://d34klbt6ve2j6" path="res://inventory.gd" id="5_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
+[ext_resource type="Script" uid="uid://qjsgpawvyh2t" path="res://inventory_ui.gd" id="6_3dxm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
 
@@ -24,7 +26,6 @@ texture = ExtResource("4_cm0pq")
 
 [node name="item" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
 position = Vector2(1110, 50)
-item_name = "Coin"
 
 [node name="Table" type="Sprite2D" parent="." unique_id=894916009]
 position = Vector2(633.5, 495)
@@ -39,5 +40,24 @@ position = Vector2(-343, 341)
 
 [node name="AnimationPlayer" parent="Customer Temp" index="1" unique_id=734950868]
 autoplay = &"progress"
+
+[node name="Inventory" type="Node" parent="." unique_id=613173553]
+script = ExtResource("5_3dxm6")
+
+[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=1759236443]
+script = ExtResource("6_3dxm6")
+
+[node name="Panel" type="Panel" parent="InventoryUI" unique_id=499249829]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 350.0
+
+[node name="Label" type="Label" parent="InventoryUI/Panel" unique_id=688324141]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0
 
 [editable path="Customer Temp"]
