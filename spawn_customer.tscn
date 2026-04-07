@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bvcjs4ohorlet"]
+
+[ext_resource type="Script" uid="uid://b4yb2arbi4v01" path="res://Scripts/spawn_customer.gd" id="1_t83pi"]
+
+[node name="SpawnCustomer" type="Node2D" unique_id=997328206]
+position = Vector2(0, 1)
+script = ExtResource("1_t83pi")
+
+[node name="Timer" type="Timer" parent="." unique_id=1235441409]
+wait_time = 6.487
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
