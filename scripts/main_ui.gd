@@ -31,11 +31,4 @@ func _on_cave_button1_pressed():
 func _on_cave_button2_pressed():
 	add_item("Bone")
 
-func _on_drop_button_pressed():
-	if inventory.size() > 0:
-		var removed_item = inventory.pop_back()
-		$MessageLabel.text = "Dropped " + removed_item + "."
-	else:
-		$MessageLabel.text = "Inventory is empty."
-
 	update_ui()
