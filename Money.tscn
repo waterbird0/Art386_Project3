@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://rwgd7dm2nwix"]
+
+[ext_resource type="Script" uid="uid://dknwycdommyqv" path="res://Scripts/money_label.gd" id="1_81rn2"]
+[ext_resource type="Texture2D" uid="uid://c4pvu5absh77c" path="res://COIN.png" id="1_v6pdl"]
+
+[node name="Money" type="Control" unique_id=796147337]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MoneyLabel" type="Label" parent="." unique_id=1413891776]
+layout_mode = 0
+offset_left = 135.0
+offset_top = -60.0
+offset_right = 535.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 30
+text = "Money: "
+script = ExtResource("1_81rn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1620032964]
+position = Vector2(75, -47)
+scale = Vector2(0.042, 0.05)
+texture = ExtResource("1_v6pdl")
