@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddtnuop4l3hvt"
-path="res://.godot/imported/blue-square-image-3.png-d874f3b6ae2e8108a736ef943b2ecc55.ctex"
+uid="uid://dk0cggulcp4va"
+path="res://.godot/imported/CozyDesert.svg-e6452b149f4698abf41fb0ef70665719.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Temp Assets/blue-square-image-3.png"
-dest_files=["res://.godot/imported/blue-square-image-3.png-d874f3b6ae2e8108a736ef943b2ecc55.ctex"]
+source_file="res://assets/CozyDesert/CozyDesert.svg"
+dest_files=["res://.godot/imported/CozyDesert.svg-e6452b149f4698abf41fb0ef70665719.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

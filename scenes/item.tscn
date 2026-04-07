@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drxgh6obw0nyc"]
 
-[ext_resource type="Script" uid="uid://fbfwidb16t5c" path="res://item.gd" id="1_tnite"]
-[ext_resource type="Texture2D" uid="uid://c4pvu5absh77c" path="res://COIN.png" id="2_ttk8k"]
+[ext_resource type="Script" uid="uid://fbfwidb16t5c" path="res://scripts/item.gd" id="1_tnite"]
+[ext_resource type="Texture2D" uid="uid://c4pvu5absh77c" path="res://assets/COIN.png" id="2_ttk8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttk8k"]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0nex2jes41uy"]
 
-[ext_resource type="Texture2D" uid="uid://ddtnuop4l3hvt" path="res://Temp Assets/blue-square-image-3.png" id="2_f7asb"]
+[ext_resource type="Texture2D" uid="uid://ddtnuop4l3hvt" path="res://assets/blue-square-image-3.png" id="2_f7asb"]
 
 [sub_resource type="Curve2D" id="Curve2D_7tiyv"]
 _data = {
