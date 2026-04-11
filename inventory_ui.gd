@@ -8,7 +8,6 @@ var is_open := false
 
 func _ready():
 	panel.visible = false
-	print("INVENTORY UI CARGADA")
 
 func _process(delta):
 	if Input.is_action_just_pressed("Inventory"):
