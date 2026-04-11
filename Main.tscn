@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
 [ext_resource type="Script" uid="uid://qjsgpawvyh2t" path="res://inventory_ui.gd" id="6_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://bvcjs4ohorlet" path="res://spawn_customer.tscn" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://6imhqq5u32xt" path="res://shop_box.tscn" id="8_trn2v"]
+[ext_resource type="Texture2D" uid="uid://c4pvu5absh77c" path="res://COIN.png" id="9_03owx"]
+[ext_resource type="Texture2D" uid="uid://ddbr825esp3at" path="res://cool_rock.svg" id="10_wkp8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
 
@@ -24,13 +27,6 @@ debug_color = Color(0.8, 0.3529412, 0.6039216, 0.81960785)
 position = Vector2(-675, 17)
 scale = Vector2(2, 2)
 texture = ExtResource("4_cm0pq")
-
-[node name="item (coin)" parent="." unique_id=1517269143 instance=ExtResource("2_r0du0")]
-position = Vector2(643, 35)
-item_name = "Coin"
-
-[node name="item (rock)" parent="." unique_id=125875830 instance=ExtResource("2_r0du0")]
-position = Vector2(643, 35)
 
 [node name="Customer Temp" parent="." unique_id=1197130464 instance=ExtResource("5_fos0i")]
 position = Vector2(573, 247)
@@ -62,5 +58,18 @@ offset_left = 20.0
 offset_top = 20.0
 offset_right = 60.0
 offset_bottom = 43.0
+
+[node name="ShopBox" parent="." unique_id=1236240028 instance=ExtResource("8_trn2v")]
+position = Vector2(184, 362)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Coin"
+spawned_item_texture = ExtResource("9_03owx")
+spawned_item_scale = Vector2(0.04, 0.04)
+
+[node name="ShopBox2" parent="." unique_id=239029756 instance=ExtResource("8_trn2v")]
+position = Vector2(86, 366)
+item_scene = ExtResource("2_r0du0")
+spawned_item_texture = ExtResource("10_wkp8b")
+spawned_item_scale = Vector2(0.08, 0.08)
 
 [editable path="Customer Temp"]
