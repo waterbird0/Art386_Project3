@@ -32,3 +32,7 @@ func _on_cave_button2_pressed():
 	add_item("Bone")
 
 	update_ui()
+
+
+func _on_cave_button_1_pressed():
+	get_tree().change_scene_to_file("res://scenes/Main.tscn")
