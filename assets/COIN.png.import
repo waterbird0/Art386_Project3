@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c18p6oivp15e5"
-path="res://.godot/imported/CozyDesert.png-eb960883154ea58c593b461b393c1677.ctex"
+uid="uid://c4pvu5absh77c"
+path="res://.godot/imported/COIN.png-44c4011752acd13644d7fe0c099fc308.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Temp Assets/CozyDesert/CozyDesert.png"
-dest_files=["res://.godot/imported/CozyDesert.png-eb960883154ea58c593b461b393c1677.ctex"]
+source_file="res://assets/COIN.png"
+dest_files=["res://.godot/imported/COIN.png-44c4011752acd13644d7fe0c099fc308.ctex"]
 
 [params]
 
