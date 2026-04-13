@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://uduxjsuuwftb"]
 
 [ext_resource type="Script" uid="uid://bejbrary3a5rs" path="res://start_screen.gd" id="1_ncxyx"]
+[ext_resource type="Texture2D" uid="uid://dw4mrmgr8uh05" path="res://assets/Map.png" id="2_pevhg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pevhg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="StartScreen" type="Control" unique_id=115806153]
 layout_mode = 3
@@ -11,10 +15,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ncxyx")
 
+[node name="Background" type="TextureRect" parent="." unique_id=36010488]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -3.0
+offset_top = 2.0
+offset_right = 1289.0
+offset_bottom = 715.0
+texture = ExtResource("2_pevhg")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="StartButton" type="Button" parent="." unique_id=170549319]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 364.0
+offset_top = 228.0
+offset_right = 607.0
+offset_bottom = 376.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxFlat_pevhg")
 text = "Start Game"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
