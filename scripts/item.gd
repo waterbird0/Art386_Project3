@@ -1,31 +1,38 @@
 extends Area2D
 
-@export var item_name := "Coin"
+@export var item_name := "Rock"
 @export var item_type := "decoration"
-@export var description := "A cute decorative item."
 @export var value := 10
-@export var amount := 1
-
-var player_in_range := false
+@export var amount := randf_range(1,3)
+@export var price := 5
+@export var item_texture: Texture2D
+@export var item_scale: Vector2 = Vector2(1, 1)
 
 func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
+	input_pickable = true
 
-func _process(_delta):
-	if player_in_range and Input.is_action_just_pressed("interact"):
-		pick_up()
+func setup_item():
+	if item_texture:
+		$Sprite2D.texture = item_texture
+	
+	$Sprite2D.scale = item_scale
 
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		player_in_range = true
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		buy_item()
 
-func _on_body_exited(body):
-	if body.is_in_group("player"):
-		player_in_range = false
-
-func pick_up():
+func buy_item():
 	var inventory = get_tree().get_first_node_in_group("inventory")
+
 	if inventory:
-		inventory.add_item(item_name, item_type, description, value, amount)
-		queue_free()
+		if inventory.has_method("spend_money"):
+			if inventory.spend_money(price):
+				inventory.add_item(item_name, item_type, value, amount)
+				print("Bought: ", item_name)
+				queue_free()
+			else:
+				print("Not enough money")
+		else:
+			inventory.add_item(item_name, item_type, value, amount)
+			print("Added (no money system): ", item_name)
+			queue_free()

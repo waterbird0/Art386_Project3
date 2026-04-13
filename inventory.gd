@@ -5,7 +5,7 @@ var items = []
 func _ready():
 	add_to_group("inventory")
 
-func add_item(item_name, item_type, description, value, amount):
+func add_item(item_name, item_type, value, amount):
 	for item in items:
 		if item["name"] == item_name:
 			item["amount"] += amount
@@ -16,7 +16,6 @@ func add_item(item_name, item_type, description, value, amount):
 	var new_item = {
 		"name": item_name,
 		"type": item_type,
-		"description": description,
 		"value": value,
 		"amount": amount
 	}

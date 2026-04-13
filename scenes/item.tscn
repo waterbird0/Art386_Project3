@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://drxgh6obw0nyc"]
 
-[ext_resource type="Script" uid="uid://fbfwidb16t5c" path="res://Scripts/item.gd" id="1_tnite"]
+[ext_resource type="Script" uid="uid://fbfwidb16t5c" path="res://item.gd" id="1_tnite"]
 [ext_resource type="Texture2D" uid="uid://c4pvu5absh77c" path="res://COIN.png" id="2_ttk8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttk8k"]
+size = Vector2(1.7250042, 1.812501)
 
 [node name="item" type="Area2D" unique_id=1517269143]
 script = ExtResource("1_tnite")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1239127756]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_ttk8k")
 debug_color = Color(0.33333334, 0.6117647, 0.32941177, 0.8901961)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460364201]
-scale = Vector2(0.02, 0.02)
+scale = Vector2(0.03, 0.03)
 texture = ExtResource("2_ttk8k")

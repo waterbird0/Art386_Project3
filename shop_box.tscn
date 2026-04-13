@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://6imhqq5u32xt"]
+
+[ext_resource type="Script" uid="uid://g40ibxb7b5hq" path="res://shop_box.gd" id="1_6r243"]
+[ext_resource type="Texture2D" uid="uid://w71e1nbdrbr8" path="res://Fondo de “caja” eliminado.png" id="2_564qp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6r243"]
+size = Vector2(223.33333, 206.66655)
+
+[node name="ShopBox" type="Area2D" unique_id=1236240028]
+script = ExtResource("1_6r243")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=704804537]
+position = Vector2(-3.8146973e-06, 1.0000002)
+scale = Vector2(0.14913459, 0.17332105)
+texture = ExtResource("2_564qp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240032041]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_6r243")
