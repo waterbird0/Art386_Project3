@@ -5,7 +5,7 @@ extends Area2D
 @export var spawned_item_name := "Rock"
 @export var spawned_item_type := "decoration"
 @export var spawned_item_value := 10
-@export var spawned_item_amount := 1
+@export var spawned_item_amount := randi_range(1,3)
 @export var spawned_item_price := 5
 @export var spawned_item_texture: Texture2D
 @export var spawned_item_scale: Vector2 = Vector2(1, 1)

@@ -3,7 +3,7 @@ extends Area2D
 @export var item_name := "Rock"
 @export var item_type := "decoration"
 @export var value := 10
-@export var amount := 1
+@export var amount := randf_range(1,3)
 @export var price := 5
 @export var item_texture: Texture2D
 @export var item_scale: Vector2 = Vector2(1, 1)
