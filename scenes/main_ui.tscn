@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://boawy7e12mnm6"]
 
 [ext_resource type="Script" uid="uid://bywt6r3ygnbaw" path="res://scripts/main_ui.gd" id="1_fnul3"]
+[ext_resource type="Texture2D" uid="uid://dk0cggulcp4va" path="res://assets/CozyDesert/CozyDesert.svg" id="2_513t2"]
 
 [node name="MainUI" type="Control" unique_id=1698500038]
 layout_mode = 3
@@ -15,49 +16,50 @@ script = ExtResource("1_fnul3")
 
 [node name="Background" type="TextureRect" parent="." unique_id=887161938]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 7.0
-offset_right = 49.0
-offset_bottom = 47.0
+offset_left = -183.0
+offset_top = -462.0
+offset_right = 1467.0
+offset_bottom = 1066.0
+texture = ExtResource("2_513t2")
 
 [node name="CaveButton1" type="Button" parent="." unique_id=319512954]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 112.0
-offset_right = 58.0
-offset_bottom = 143.0
+offset_left = 7.0
+offset_top = 180.0
+offset_right = 66.0
+offset_bottom = 211.0
 text = "Cave 1"
 
 [node name="CaveButton2" type="Button" parent="." unique_id=552659291]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 122.0
-offset_right = 450.0
-offset_bottom = 153.0
+offset_left = 1211.0
+offset_top = 182.0
+offset_right = 1270.0
+offset_bottom = 213.0
 text = "Cave 2"
 
 [node name="MoneyLabel" type="Label" parent="." unique_id=897449068]
 layout_mode = 0
-offset_left = 383.0
-offset_top = 4.0
-offset_right = 454.0
-offset_bottom = 27.0
+offset_left = 1182.0
+offset_top = 37.0
+offset_right = 1253.0
+offset_bottom = 60.0
 text = "Money: 0"
 
 [node name="ItemLabel" type="Label" parent="." unique_id=663209311]
 layout_mode = 0
-offset_left = 382.0
-offset_top = 25.0
-offset_right = 468.0
-offset_bottom = 48.0
+offset_left = 1177.0
+offset_top = 8.0
+offset_right = 1263.0
+offset_bottom = 31.0
 text = "Item: None"
 
 [node name="MessageLabel" type="Label" parent="." unique_id=1386512830]
 layout_mode = 0
-offset_left = 124.0
-offset_top = 237.0
-offset_right = 356.0
-offset_bottom = 260.0
+offset_left = 477.0
+offset_top = 406.0
+offset_right = 709.0
+offset_bottom = 429.0
 text = "Click a cave to gather an item."
 
 [node name="InventoryLabel" type="Label" parent="." unique_id=1783420643]

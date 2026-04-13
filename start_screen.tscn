@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://uduxjsuuwftb"]
+
+[ext_resource type="Script" uid="uid://bejbrary3a5rs" path="res://start_screen.gd" id="1_ncxyx"]
+
+[node name="StartScreen" type="Control" unique_id=115806153]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ncxyx")
+
+[node name="StartButton" type="Button" parent="." unique_id=170549319]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Start Game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
