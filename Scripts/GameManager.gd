@@ -5,7 +5,7 @@ var money: int = 0
 
 func add_money(amount: int):
 	money += amount
-	print("Money:", money)
+	print("$", money)
 	
 
 

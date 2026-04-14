@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://c6xfk1fin4nnf"]
+
+[ext_resource type="Script" uid="uid://qjsgpawvyh2t" path="res://inventory_ui.gd" id="1_tahbm"]
+[ext_resource type="Texture2D" uid="uid://dtd47wthwolj0" path="res://art/Items/throwingrock.png" id="2_ylkvr"]
+[ext_resource type="Texture2D" uid="uid://dp1q3bf0t4nwi" path="res://art/Items/shinyrock.png" id="3_mdwe3"]
+[ext_resource type="Texture2D" uid="uid://dyu1l3er1iq4n" path="res://art/Items/coolrock.png" id="4_iradw"]
+[ext_resource type="Texture2D" uid="uid://b7otmp3fklyne" path="res://art/Items/SharpBoneSpriteSheet.png" id="5_eifbp"]
+[ext_resource type="Texture2D" uid="uid://dh8uy60tobcma" path="res://art/Items/RegularBoneSpriteSheet.png" id="6_2lmnb"]
+[ext_resource type="Texture2D" uid="uid://4hdgsb7xdo00" path="res://art/Items/mushroom (1).png" id="7_eicjl"]
+[ext_resource type="Texture2D" uid="uid://bw18nn4cc6vng" path="res://art/Items/log.png" id="8_uwj4j"]
+[ext_resource type="Texture2D" uid="uid://dyqnyo4tbw4cd" path="res://art/Items/Berry1.png" id="9_1dxi5"]
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=1340166223]
+script = ExtResource("1_tahbm")
+
+[node name="Panel" type="Panel" parent="." unique_id=230521673]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 350.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=990326810]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0
+
+[node name="Throwing Rock" type="Sprite2D" parent="Panel/Label" unique_id=625671222]
+position = Vector2(250, 65)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_ylkvr")
+
+[node name="Shiny Rock" type="Sprite2D" parent="Panel/Label" unique_id=1951381848]
+position = Vector2(250, 93)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_mdwe3")
+
+[node name="Cool Rock" type="Sprite2D" parent="Panel/Label" unique_id=530999622]
+position = Vector2(250, 122)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("4_iradw")
+
+[node name="Sharp Bone" type="Sprite2D" parent="Panel/Label" unique_id=1921845056]
+position = Vector2(250, 144)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("5_eifbp")
+region_enabled = true
+region_rect = Rect2(0, -8, 1720, 1856)
+
+[node name="Regular Bone" type="Sprite2D" parent="Panel/Label" unique_id=741711759]
+position = Vector2(250, 164)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("6_2lmnb")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 838)
+
+[node name="Mushroom" type="Sprite2D" parent="Panel/Label" unique_id=762257831]
+position = Vector2(250, 190)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_eicjl")
+
+[node name="Log" type="Sprite2D" parent="Panel/Label" unique_id=1662990860]
+position = Vector2(250, 220)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("8_uwj4j")
+
+[node name="Berry" type="Sprite2D" parent="Panel/Label" unique_id=1590907173]
+position = Vector2(253, 250)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("9_1dxi5")

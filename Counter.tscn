@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dyhs8bjurrcsd"]
 
 [ext_resource type="Script" uid="uid://bwkown4d1rfyq" path="res://Scripts/detectCustomer.gd" id="1_jw0do"]
-[ext_resource type="Texture2D" uid="uid://igpkl3bwd2ml" path="res://icon.svg" id="2_3jo6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5a7xg"]
-size = Vector2(342, 174)
+size = Vector2(146, 174)
 
 [node name="Node2D" type="Node2D" unique_id=1670913522]
 
@@ -12,13 +11,12 @@ size = Vector2(342, 174)
 script = ExtResource("1_jw0do")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1352937087]
-position = Vector2(78, -2)
+position = Vector2(176, -2)
 shape = SubResource("RectangleShape2D_5a7xg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=758881223]
 z_index = -3
 position = Vector2(77, 1)
-scale = Vector2(3.0078125, 1)
-texture = ExtResource("2_3jo6w")
+scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

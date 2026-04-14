@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dh6wrwnnf8ywe"]
 
-[ext_resource type="Texture2D" uid="uid://c18p6oivp15e5" path="res://assets/CozyDesert/CozyDesert.png" id="1_vmwkq"]
+[ext_resource type="Texture2D" uid="uid://867e7qm340gd" path="res://art/BACKGROUND.png" id="1_ywdfb"]
 
 [node name="Node2D" type="Node2D" unique_id=1608760585]
 
@@ -11,6 +11,6 @@ offset_bottom = 717.0
 
 [node name="CozyDesert" type="Sprite2D" parent="." unique_id=268962338]
 z_index = -3684
-scale = Vector2(0.6704841, 0.66604996)
-texture = ExtResource("1_vmwkq")
+scale = Vector2(0.23560926, 0.23464426)
+texture = ExtResource("1_ywdfb")
 centered = false
