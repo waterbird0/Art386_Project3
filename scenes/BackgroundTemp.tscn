@@ -8,6 +8,7 @@
 z_index = -4000
 offset_right = 1285.0
 offset_bottom = 717.0
+mouse_filter = 2
 
 [node name="CozyDesert" type="Sprite2D" parent="." unique_id=268962338]
 z_index = -3684

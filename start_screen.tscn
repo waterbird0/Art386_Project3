@@ -20,19 +20,21 @@ layout_mode = 1
 anchors_preset = -1
 offset_left = -3.0
 offset_top = 2.0
-offset_right = 1289.0
-offset_bottom = 715.0
+offset_right = 1899.0
+offset_bottom = 1088.0
+mouse_filter = 2
 texture = ExtResource("2_pevhg")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="StartButton" type="Button" parent="." unique_id=170549319]
 layout_mode = 0
-offset_left = 364.0
-offset_top = 228.0
-offset_right = 607.0
-offset_bottom = 376.0
+offset_left = 762.0
+offset_top = 394.0
+offset_right = 1006.0
+offset_bottom = 542.0
 scale = Vector2(2, 2)
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_pevhg")
 text = "Start Game"
 

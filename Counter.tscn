@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://dyhs8bjurrcsd"]
 
 [ext_resource type="Script" uid="uid://bwkown4d1rfyq" path="res://Scripts/detectCustomer.gd" id="1_jw0do"]
+[ext_resource type="Texture2D" uid="uid://dtd47wthwolj0" path="res://art/Items/throwingrock.png" id="2_jw0do"]
+[ext_resource type="Texture2D" uid="uid://ddbr825esp3at" path="res://cool_rock.svg" id="3_b6ixa"]
+[ext_resource type="Texture2D" uid="uid://dp1q3bf0t4nwi" path="res://art/Items/shinyrock.png" id="4_t3rjw"]
+[ext_resource type="Texture2D" uid="uid://dyqnyo4tbw4cd" path="res://art/Items/Berry1.png" id="5_gvn4u"]
+[ext_resource type="Texture2D" uid="uid://bw18nn4cc6vng" path="res://art/Items/log.png" id="6_d4fyy"]
+[ext_resource type="Texture2D" uid="uid://4hdgsb7xdo00" path="res://art/Items/mushroom (1).png" id="7_045m4"]
+[ext_resource type="Texture2D" uid="uid://dh8uy60tobcma" path="res://art/Items/RegularBoneSpriteSheet.png" id="8_u632k"]
+[ext_resource type="Texture2D" uid="uid://b7otmp3fklyne" path="res://art/Items/SharpBoneSpriteSheet.png" id="9_xly6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5a7xg"]
 size = Vector2(146, 174)
@@ -19,4 +27,59 @@ z_index = -3
 position = Vector2(77, 1)
 scale = Vector2(2, 2)
 
+[node name="Throwing Rock" type="Sprite2D" parent="." unique_id=1899844424]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jw0do")
+
+[node name="Cool Rock" type="Sprite2D" parent="." unique_id=231622989]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_b6ixa")
+
+[node name="Shiny Rock" type="Sprite2D" parent="." unique_id=1423863960]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_t3rjw")
+
+[node name="Berry" type="Sprite2D" parent="." unique_id=1183092718]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_gvn4u")
+
+[node name="Log" type="Sprite2D" parent="." unique_id=1482022909]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_d4fyy")
+
+[node name="Mushroom" type="Sprite2D" parent="." unique_id=2147365283]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_045m4")
+
+[node name="Regular Bone" type="Sprite2D" parent="." unique_id=447617197]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_u632k")
+region_enabled = true
+region_rect = Rect2(0, 0, 1936, 856)
+
+[node name="Sharp Bone" type="Sprite2D" parent="." unique_id=566412966]
+visible = false
+position = Vector2(329, -171)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_xly6q")
+region_enabled = true
+region_rect = Rect2(0, 0, 1728, 1856)
+
+[node name="Timer" type="Timer" parent="." unique_id=1891391557]
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="Area2D" method="_on_timer_timeout"]
