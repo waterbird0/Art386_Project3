@@ -13,10 +13,10 @@ grow_vertical = 2
 
 [node name="MoneyLabel" type="Label" parent="." unique_id=1413891776]
 layout_mode = 0
-offset_left = 135.0
-offset_top = -60.0
-offset_right = 535.0
-offset_bottom = 77.0
+offset_left = 124.0
+offset_top = -64.0
+offset_right = 524.0
+offset_bottom = 73.0
 theme_override_font_sizes/font_size = 30
 text = "Money: "
 script = ExtResource("1_81rn2")

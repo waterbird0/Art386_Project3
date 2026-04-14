@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var customer_scene = preload("res://scenes/customer.tscn")
 @onready var customer_container = get_parent().get_node("Customer Temp") # a Node2D to hold all customers
-var customer_count = randi() % 10 + 10
+var customer_count = randi() % 10 + 5
 var customers_today = 0
 func _ready() -> void:
 	$Timer.one_shot = true

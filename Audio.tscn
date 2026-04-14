@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b1dmspqecmjyk"]
+
+[ext_resource type="AudioStream" uid="uid://ceoqa3emil6kj" path="res://Audio/select.wav" id="1_ml5b6"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1701970637]
+stream = ExtResource("1_ml5b6")
+volume_db = -20.0
+autoplay = true

@@ -15,7 +15,9 @@ func _ready():
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		open_box()
+		if GameManager.money > 0:
+			GameManager.add_money(-10)
+			open_box()
 
 func open_box():
 	if item_scene:

@@ -1,35 +1,31 @@
 [gd_scene format=3 uid="uid://cdmdqifksffkn"]
 
-[ext_resource type="Script" uid="uid://dlupn162u1jgj" path="res://player.gd" id="1_glv2v"]
-[ext_resource type="PackedScene" uid="uid://drxgh6obw0nyc" path="res://item.tscn" id="2_r0du0"]
-[ext_resource type="Texture2D" uid="uid://igpkl3bwd2ml" path="res://icon.svg" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://drxgh6obw0nyc" path="res://scenes/item.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://c6xfk1fin4nnf" path="res://scenes/inventory_ui.tscn" id="4_bb450"]
 [ext_resource type="Script" uid="uid://d34klbt6ve2j6" path="res://inventory.gd" id="5_3dxm6"]
-[ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://customer.tscn" id="5_fos0i"]
-[ext_resource type="Script" uid="uid://qjsgpawvyh2t" path="res://inventory_ui.gd" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://c0nex2jes41uy" path="res://scenes/customer.tscn" id="5_fos0i"]
 [ext_resource type="PackedScene" uid="uid://bvcjs4ohorlet" path="res://spawn_customer.tscn" id="7_lgr22"]
+[ext_resource type="Texture2D" uid="uid://dtd47wthwolj0" path="res://art/Items/throwingrock.png" id="7_q8u5g"]
 [ext_resource type="PackedScene" uid="uid://6imhqq5u32xt" path="res://shop_box.tscn" id="8_trn2v"]
-[ext_resource type="Texture2D" uid="uid://c4pvu5absh77c" path="res://COIN.png" id="9_03owx"]
+[ext_resource type="Texture2D" uid="uid://dp1q3bf0t4nwi" path="res://art/Items/shinyrock.png" id="9_lhr70"]
+[ext_resource type="Texture2D" uid="uid://dh8uy60tobcma" path="res://art/Items/RegularBoneSpriteSheet.png" id="10_mwfav"]
 [ext_resource type="Texture2D" uid="uid://ddbr825esp3at" path="res://cool_rock.svg" id="10_wkp8b"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
+[ext_resource type="Texture2D" uid="uid://b7otmp3fklyne" path="res://art/Items/SharpBoneSpriteSheet.png" id="11_3p2gp"]
+[ext_resource type="Texture2D" uid="uid://4hdgsb7xdo00" path="res://art/Items/mushroom (1).png" id="12_cvmbd"]
+[ext_resource type="Texture2D" uid="uid://bw18nn4cc6vng" path="res://art/Items/log.png" id="13_ft6cd"]
+[ext_resource type="Texture2D" uid="uid://dyqnyo4tbw4cd" path="res://art/Items/Berry1.png" id="14_bb450"]
+[ext_resource type="PackedScene" uid="uid://dyhs8bjurrcsd" path="res://Counter.tscn" id="15_3p2gp"]
+[ext_resource type="PackedScene" uid="uid://rwgd7dm2nwix" path="res://Money.tscn" id="16_cvmbd"]
+[ext_resource type="PackedScene" uid="uid://dh6wrwnnf8ywe" path="res://scenes/BackgroundTemp.tscn" id="17_ft6cd"]
+[ext_resource type="Texture2D" uid="uid://dgbqdaeowev6d" path="res://art/Characters/clerk.png" id="18_bb450"]
+[ext_resource type="PackedScene" uid="uid://b1dmspqecmjyk" path="res://Audio.tscn" id="19_nfivy"]
+[ext_resource type="AudioStream" uid="uid://blogarsoomvrd" path="res://Audio/5_Coins.ogg" id="20_1nqs0"]
 
 [node name="Node2D" type="Node2D" unique_id=611316477]
-
-[node name="player" type="CharacterBody2D" parent="." unique_id=1132045356]
-position = Vector2(200, 200)
-script = ExtResource("1_glv2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=527137855]
-shape = SubResource("RectangleShape2D_rxg2q")
-debug_color = Color(0.8, 0.3529412, 0.6039216, 0.81960785)
-
-[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=52282693]
-position = Vector2(-675, 17)
-scale = Vector2(2, 2)
-texture = ExtResource("4_cm0pq")
+metadata/_edit_vertical_guides_ = [-204.0]
 
 [node name="Customer Temp" parent="." unique_id=1197130464 instance=ExtResource("5_fos0i")]
-position = Vector2(573, 247)
+position = Vector2(388, 247)
 
 [node name="Path2D" parent="Customer Temp" index="0" unique_id=1594749577]
 position = Vector2(-343, 341)
@@ -38,38 +34,102 @@ position = Vector2(-343, 341)
 autoplay = &"RESET"
 
 [node name="SpawnCustomer" parent="." unique_id=997328206 instance=ExtResource("7_lgr22")]
-position = Vector2(-216, 329)
+position = Vector2(-172, 559)
 
 [node name="Inventory" type="Node" parent="." unique_id=613173553]
 script = ExtResource("5_3dxm6")
 
-[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=1759236443]
-script = ExtResource("6_3dxm6")
-
-[node name="Panel" type="Panel" parent="InventoryUI" unique_id=499249829]
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 350.0
-offset_bottom = 350.0
-
-[node name="Label" type="Label" parent="InventoryUI/Panel" unique_id=688324141]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 60.0
-offset_bottom = 43.0
+[node name="InventoryUI" parent="." unique_id=1941336782 instance=ExtResource("4_bb450")]
 
 [node name="ShopBox" parent="." unique_id=1236240028 instance=ExtResource("8_trn2v")]
-position = Vector2(184, 362)
+position = Vector2(1487, 316)
 item_scene = ExtResource("2_r0du0")
-spawned_item_name = "Coin"
-spawned_item_texture = ExtResource("9_03owx")
+spawned_item_name = "Throwing Rock"
+spawned_item_texture = ExtResource("7_q8u5g")
 spawned_item_scale = Vector2(0.04, 0.04)
 
 [node name="ShopBox2" parent="." unique_id=239029756 instance=ExtResource("8_trn2v")]
-position = Vector2(86, 366)
+position = Vector2(1387, 316)
 item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Cool Rock"
 spawned_item_texture = ExtResource("10_wkp8b")
 spawned_item_scale = Vector2(0.08, 0.08)
+
+[node name="ShopBox3" parent="." unique_id=1619508549 instance=ExtResource("8_trn2v")]
+position = Vector2(1287, 316)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Shiny Rock"
+spawned_item_texture = ExtResource("9_lhr70")
+spawned_item_scale = Vector2(0.04, 0.04)
+
+[node name="ShopBox4" parent="." unique_id=2085133746 instance=ExtResource("8_trn2v")]
+position = Vector2(1187, 316)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Regular Bone"
+spawned_item_texture = ExtResource("10_mwfav")
+spawned_item_scale = Vector2(0.08, 0.08)
+
+[node name="ShopBox5" parent="." unique_id=1784547251 instance=ExtResource("8_trn2v")]
+position = Vector2(1187, 416)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Sharp Bone"
+spawned_item_texture = ExtResource("11_3p2gp")
+spawned_item_scale = Vector2(0.04, 0.04)
+
+[node name="ShopBox6" parent="." unique_id=403235311 instance=ExtResource("8_trn2v")]
+position = Vector2(1287, 416)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Mushroom"
+spawned_item_texture = ExtResource("12_cvmbd")
+spawned_item_scale = Vector2(0.08, 0.08)
+
+[node name="ShopBox7" parent="." unique_id=441488959 instance=ExtResource("8_trn2v")]
+position = Vector2(1387, 416)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Log"
+spawned_item_texture = ExtResource("13_ft6cd")
+spawned_item_scale = Vector2(0.04, 0.04)
+
+[node name="ShopBox8" parent="." unique_id=420023914 instance=ExtResource("8_trn2v")]
+position = Vector2(1487, 416)
+item_scene = ExtResource("2_r0du0")
+spawned_item_name = "Berry"
+spawned_item_texture = ExtResource("14_bb450")
+spawned_item_scale = Vector2(0.08, 0.08)
+
+[node name="Counter" parent="." unique_id=1670913522 instance=ExtResource("15_3p2gp")]
+position = Vector2(498, 629)
+
+[node name="Money" parent="." unique_id=796147337 instance=ExtResource("16_cvmbd")]
+offset_left = 1481.0
+offset_top = 102.0
+offset_right = 1481.0
+offset_bottom = 102.0
+
+[node name="Background" parent="." unique_id=1608760585 instance=ExtResource("17_ft6cd")]
+
+[node name="Clerk" type="Sprite2D" parent="." unique_id=901575193]
+position = Vector2(1740, 809)
+texture = ExtResource("18_bb450")
+
+[node name="Label" type="Label" parent="." unique_id=1810437135]
+offset_left = 1125.0
+offset_top = 226.0
+offset_right = 1588.0
+offset_bottom = 249.0
+text = "Boxes Cost 10 gold click a box and click an item to pick it up."
+
+[node name="Label2" type="Label" parent="." unique_id=905915054]
+offset_left = 1136.0
+offset_top = 458.0
+offset_right = 1599.0
+offset_bottom = 481.0
+text = "Press I to access inventory and see available items."
+
+[node name="Music" parent="." unique_id=1701970637 instance=ExtResource("19_nfivy")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2005052597]
+stream = ExtResource("20_1nqs0")
+autoplay = true
 
 [editable path="Customer Temp"]
