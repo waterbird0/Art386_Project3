@@ -8,18 +8,20 @@
 [ext_resource type="Texture2D" uid="uid://dtd47wthwolj0" path="res://art/Items/throwingrock.png" id="7_q8u5g"]
 [ext_resource type="PackedScene" uid="uid://6imhqq5u32xt" path="res://shop_box.tscn" id="8_trn2v"]
 [ext_resource type="Texture2D" uid="uid://dp1q3bf0t4nwi" path="res://art/Items/shinyrock.png" id="9_lhr70"]
-[ext_resource type="Texture2D" uid="uid://dh8uy60tobcma" path="res://art/Items/RegularBoneSpriteSheet.png" id="10_mwfav"]
+[ext_resource type="Texture2D" uid="uid://bry2bfbv0bl40" path="res://art/Items/RegularBoneSpriteSheetAdjusted for box.png" id="10_nfivy"]
 [ext_resource type="Texture2D" uid="uid://ddbr825esp3at" path="res://cool_rock.svg" id="10_wkp8b"]
-[ext_resource type="Texture2D" uid="uid://b7otmp3fklyne" path="res://art/Items/SharpBoneSpriteSheet.png" id="11_3p2gp"]
+[ext_resource type="Texture2D" uid="uid://dmkuoedufrp47" path="res://art/Items/SharpBoneSpriteSheet Adjusted for box.png" id="11_nfivy"]
 [ext_resource type="Texture2D" uid="uid://4hdgsb7xdo00" path="res://art/Items/mushroom (1).png" id="12_cvmbd"]
 [ext_resource type="Texture2D" uid="uid://bw18nn4cc6vng" path="res://art/Items/log.png" id="13_ft6cd"]
-[ext_resource type="Texture2D" uid="uid://dyqnyo4tbw4cd" path="res://art/Items/Berry1.png" id="14_bb450"]
 [ext_resource type="PackedScene" uid="uid://dyhs8bjurrcsd" path="res://Counter.tscn" id="15_3p2gp"]
 [ext_resource type="PackedScene" uid="uid://rwgd7dm2nwix" path="res://Money.tscn" id="16_cvmbd"]
 [ext_resource type="PackedScene" uid="uid://dh6wrwnnf8ywe" path="res://scenes/BackgroundTemp.tscn" id="17_ft6cd"]
 [ext_resource type="Texture2D" uid="uid://dgbqdaeowev6d" path="res://art/Characters/clerk.png" id="18_bb450"]
 [ext_resource type="PackedScene" uid="uid://b1dmspqecmjyk" path="res://Audio.tscn" id="19_nfivy"]
 [ext_resource type="AudioStream" uid="uid://blogarsoomvrd" path="res://Audio/5_Coins.ogg" id="20_1nqs0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nfivy"]
+load_path = "res://.godot/imported/Berry1.png-04ccce1f1a4c965883de714ed0b3a0bc.ctex"
 
 [node name="Node2D" type="Node2D" unique_id=611316477]
 metadata/_edit_vertical_guides_ = [-204.0]
@@ -46,7 +48,7 @@ position = Vector2(1487, 316)
 item_scene = ExtResource("2_r0du0")
 spawned_item_name = "Throwing Rock"
 spawned_item_texture = ExtResource("7_q8u5g")
-spawned_item_scale = Vector2(0.04, 0.04)
+spawned_item_scale = Vector2(0.08, 0.08)
 
 [node name="ShopBox2" parent="." unique_id=239029756 instance=ExtResource("8_trn2v")]
 position = Vector2(1387, 316)
@@ -60,20 +62,20 @@ position = Vector2(1287, 316)
 item_scene = ExtResource("2_r0du0")
 spawned_item_name = "Shiny Rock"
 spawned_item_texture = ExtResource("9_lhr70")
-spawned_item_scale = Vector2(0.04, 0.04)
+spawned_item_scale = Vector2(0.08, 0.08)
 
 [node name="ShopBox4" parent="." unique_id=2085133746 instance=ExtResource("8_trn2v")]
 position = Vector2(1187, 316)
 item_scene = ExtResource("2_r0du0")
 spawned_item_name = "Regular Bone"
-spawned_item_texture = ExtResource("10_mwfav")
-spawned_item_scale = Vector2(0.08, 0.08)
+spawned_item_texture = ExtResource("10_nfivy")
+spawned_item_scale = Vector2(0.06, 0.06)
 
 [node name="ShopBox5" parent="." unique_id=1784547251 instance=ExtResource("8_trn2v")]
 position = Vector2(1187, 416)
 item_scene = ExtResource("2_r0du0")
 spawned_item_name = "Sharp Bone"
-spawned_item_texture = ExtResource("11_3p2gp")
+spawned_item_texture = ExtResource("11_nfivy")
 spawned_item_scale = Vector2(0.04, 0.04)
 
 [node name="ShopBox6" parent="." unique_id=403235311 instance=ExtResource("8_trn2v")]
@@ -88,14 +90,14 @@ position = Vector2(1387, 416)
 item_scene = ExtResource("2_r0du0")
 spawned_item_name = "Log"
 spawned_item_texture = ExtResource("13_ft6cd")
-spawned_item_scale = Vector2(0.04, 0.04)
+spawned_item_scale = Vector2(0.08, 0.08)
 
 [node name="ShopBox8" parent="." unique_id=420023914 instance=ExtResource("8_trn2v")]
 position = Vector2(1487, 416)
 item_scene = ExtResource("2_r0du0")
 spawned_item_name = "Berry"
-spawned_item_texture = ExtResource("14_bb450")
-spawned_item_scale = Vector2(0.08, 0.08)
+spawned_item_texture = SubResource("CompressedTexture2D_nfivy")
+spawned_item_scale = Vector2(0.04, 0.04)
 
 [node name="Counter" parent="." unique_id=1670913522 instance=ExtResource("15_3p2gp")]
 position = Vector2(498, 629)
